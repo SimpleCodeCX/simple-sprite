@@ -11,7 +11,7 @@ npm install
 
 ### 运行代码生成雪碧图
 ```javascript
-node index.js imgs3
+node ./index.js ./imgs
 ```
 
 ### 注释版代码

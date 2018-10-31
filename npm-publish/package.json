@@ -1,0 +1,20 @@
+{
+  "name": "simple-sprite",
+  "version": "1.0.0",
+  "description": "sprite image generator",
+  "main": "umd/simple-sprite.umd.js",
+  "module": "npm-publish/es/simple-sprite.es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sprite",
+    "Image"
+  ],
+  "author": "Simple",
+  "license": "ISC",
+  "dependencies": {
+    "images": "^3.0.1",
+    "log4js": "^3.0.6"
+  }
+}
