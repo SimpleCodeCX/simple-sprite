@@ -66,6 +66,13 @@ if (!targetImagesDirPath) {
 }
 let imageInfos = fs.readdirSync(targetImagesDirPath)
   .filter(filename => filename != 'sprite.png')
+  .filter(filename => {
+    let suffix = filename.substring(filename.indexOf('.')).toLowerCase();
+    if (suffix != ".bmp" && suffix != ".png" && suffix != ".gif" && suffix != ".jpg" && suffix != ".jpeg") {
+      return false;
+    }
+    return true;
+  })
   .map(filename => path.join(targetImagesDirPath, filename))
   .filter(filepath => fs.statSync(filepath).isFile())
   .map(filepath => new ImageInfo(filepath, images(filepath).size()));
@@ -189,6 +196,15 @@ regions.forEach(region => {
 });
 sprintImage.save(path.join(targetImagesDirPath, 'sprite.png'));
 
+/**
+ * 生成css文件
+ */
+let content = '';
+for (let i = 0, len = regions.length; i < len; i++) {
+  let _imgCss = `{${regions[i].path},background-position: -${regions[i].x}px -${regions[i].y}px,width:${regions[i].width}px,height:${regions[i].height}px}\n`;
+  content = content + _imgCss;
+}
+fs.writeFileSync(path.join(targetImagesDirPath, './sprite-css.txt'), content);
 
 
 
