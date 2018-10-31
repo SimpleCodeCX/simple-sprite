@@ -154,7 +154,8 @@ for (let i = 0, len = regions.length; i < len; i++) {
   content = content + _imgCss;
 }
 fs.writeFileSync(path.join(targetImagesDirPath, './sprite-css.txt'), content);
-
+logger.info(`generate sprite image success,it has been saved in ${targetImagesDirPath}/sprite.png`);
+logger.info(`generate css success,it has been saved in ${targetImagesDirPath}/sprite-css.txt`);
 
 
 
