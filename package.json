@@ -1,0 +1,29 @@
+{
+  "name": "simple-sprite",
+  "version": "1.0.0",
+  "description": "sprite image generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sprite",
+    "Image"
+  ],
+  "author": "Simple",
+  "license": "ISC",
+  "dependencies": {
+    "images": "^3.0.1",
+    "log4js": "^3.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
+}
