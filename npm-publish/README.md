@@ -9,8 +9,19 @@ Github Project: [https://github.com/SimpleCodeCX/simple-sprite](https://github.c
 npm install --save simple-sprite 
 ```
 ### Usage
+
 ```javascript
-let sprite = require('simple-sprite');
-sprite.main('./imgs'); // ./imgs 是你的图片目录
+// 支持es格式
+import { generateSprite } from 'simple-sprite';
+// ./imgs 图片目录
+generateSprite('./imgs'); 
 ```
+或
+
+```javascript
+// 支持umd或cjs格式
+let sprite = require('simple-sprite');
+sprite.generateSprite('./imgs');
+```
+
 
