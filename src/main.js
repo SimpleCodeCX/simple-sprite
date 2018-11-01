@@ -8,7 +8,7 @@ import { ImageInfo, Point, SimpleSprite } from './sprite';
 var logger = log4js.getLogger('ngo-sprite');
 logger.level = 'info';
 
-export function main(targetImagesDirPath) {
+export function generateSprite(targetImagesDirPath) {
 
   if (!targetImagesDirPath) {
     logger.error('please input image dir.');
